@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nome": "Notebook Gamer",
+    "preco": 5500,
+    "categoria": "eletronicos",
+    "estoque": 15
+  },
+  {
+    "id": 2,
+    "nome": "Mouse Sem Fio",
+    "preco": 89.9,
+    "categoria": "eletronicos",
+    "estoque": 50
+  },
+  {
+    "id": 3,
+    "nome": "Teclado Mec\u00e2nico",
+    "preco": 450,
+    "categoria": "eletronicos",
+    "estoque": 30
+  },
+  {
+    "id": 4,
+    "nome": "Cadeira Ergon\u00f4mica",
+    "preco": 1200,
+    "categoria": "moveis",
+    "estoque": 20
+  },
+  {
+    "id": 5,
+    "nome": "Monitor 24\"",
+    "preco": 980,
+    "categoria": "eletronicos",
+    "estoque": 25
+  },
+  {
+    "id": 6,
+    "nome": "Headset USB",
+    "preco": 250,
+    "categoria": "eletronicos",
+    "estoque": 40
+  }
+]

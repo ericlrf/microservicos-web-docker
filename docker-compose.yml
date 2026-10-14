@@ -1,0 +1,78 @@
+name: microsservicos-demo
+
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "127.0.0.1:${GATEWAY_PORT:-8080}:8080"
+    environment:
+      PORT: "8080"
+      NODE_ENV: production
+      AUTH_URL: http://auth-service:3002
+      CATALOG_URL: http://catalog-service:3001
+      UPSTREAM_TIMEOUT_MS: "3000"
+    depends_on:
+      auth-service:
+        condition: service_healthy
+      catalog-service:
+        condition: service_healthy
+    networks: [micro-network]
+    init: true
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "healthcheck.cjs"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  auth-service:
+    build: ./auth-service
+    environment:
+      PORT: "3002"
+      NODE_ENV: production
+      JWT_SECRET: "${JWT_SECRET:?Crie .env a partir de .env.example}"
+    expose: ["3002"]
+    networks: [micro-network]
+    init: true
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "healthcheck.cjs"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  catalog-service:
+    build: ./catalog-service
+    environment:
+      PORT: "3001"
+      NODE_ENV: production
+    expose: ["3001"]
+    networks: [micro-network]
+    init: true
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "healthcheck.cjs"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+# Rede bridge do projeto: nao e uma VPN e nao cifra as chamadas HTTP.
+# Apenas o gateway publica porta no host, limitada a 127.0.0.1.
+networks:
+  micro-network:
+    driver: bridge

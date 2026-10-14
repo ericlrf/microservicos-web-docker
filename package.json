@@ -1,0 +1,15 @@
+{
+  "name": "microsservicos-demo",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Material didatico: microsservicos, Docker e autenticacao",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/unit.test.cjs",
+    "check": "node scripts/check-syntax.mjs",
+    "test:api": "node api-gateway/test-api.mjs",
+    "init-env": "node scripts/init-env.mjs"
+  }
+}

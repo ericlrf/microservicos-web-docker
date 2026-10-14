@@ -1,0 +1,274 @@
+TAP version 13
+# Subtest: Bearer valido
+ok 1 - Bearer valido
+  ---
+  duration_ms: 4.820026
+  type: 'test'
+  ...
+# Subtest: Esquema Bearer insensivel a caixa
+ok 2 - Esquema Bearer insensivel a caixa
+  ---
+  duration_ms: 1.15747
+  type: 'test'
+  ...
+# Subtest: Bearer rejeita ausente
+ok 3 - Bearer rejeita ausente
+  ---
+  duration_ms: 0.13299
+  type: 'test'
+  ...
+# Subtest: Bearer rejeita Basic
+ok 4 - Bearer rejeita Basic
+  ---
+  duration_ms: 0.131201
+  type: 'test'
+  ...
+# Subtest: Bearer rejeita vazio
+ok 5 - Bearer rejeita vazio
+  ---
+  duration_ms: 0.163507
+  type: 'test'
+  ...
+# Subtest: Bearer rejeita excesso
+ok 6 - Bearer rejeita excesso
+  ---
+  duration_ms: 0.776787
+  type: 'test'
+  ...
+# Subtest: Bearer rejeita espacos
+ok 7 - Bearer rejeita espacos
+  ---
+  duration_ms: 0.648621
+  type: 'test'
+  ...
+# Subtest: Configuracao padrao do gateway
+ok 8 - Configuracao padrao do gateway
+  ---
+  duration_ms: 1.885177
+  type: 'test'
+  ...
+# Subtest: Configuracao permite host de teste
+ok 9 - Configuracao permite host de teste
+  ---
+  duration_ms: 0.690863
+  type: 'test'
+  ...
+# Subtest: Upstream rejeita protocolo
+ok 10 - Upstream rejeita protocolo
+  ---
+  duration_ms: 0.788674
+  type: 'test'
+  ...
+# Subtest: Upstream rejeita credenciais
+ok 11 - Upstream rejeita credenciais
+  ---
+  duration_ms: 0.291202
+  type: 'test'
+  ...
+# Subtest: Upstream rejeita caminho
+ok 12 - Upstream rejeita caminho
+  ---
+  duration_ms: 0.103039
+  type: 'test'
+  ...
+# Subtest: Upstream rejeita query
+ok 13 - Upstream rejeita query
+  ---
+  duration_ms: 1.842365
+  type: 'test'
+  ...
+# Subtest: Porta invalida rejeitada
+ok 14 - Porta invalida rejeitada
+  ---
+  duration_ms: 0.181972
+  type: 'test'
+  ...
+# Subtest: Timeout zero rejeitado
+ok 15 - Timeout zero rejeitado
+  ---
+  duration_ms: 0.090308
+  type: 'test'
+  ...
+# Subtest: Catalogo tem seis produtos
+ok 16 - Catalogo tem seis produtos
+  ---
+  duration_ms: 0.152195
+  type: 'test'
+  ...
+# Subtest: Pagina padrao retorna todos os seis produtos
+ok 17 - Pagina padrao retorna todos os seis produtos
+  ---
+  duration_ms: 0.242232
+  type: 'test'
+  ...
+# Subtest: Paginacao retorna apenas IDs 3 e 4
+ok 18 - Paginacao retorna apenas IDs 3 e 4
+  ---
+  duration_ms: 0.225218
+  type: 'test'
+  ...
+# Subtest: Total nao confunde quantidade retornada
+ok 19 - Total nao confunde quantidade retornada
+  ---
+  duration_ms: 0.373192
+  type: 'test'
+  ...
+# Subtest: Pagina alem do fim retorna lista vazia
+ok 20 - Pagina alem do fim retorna lista vazia
+  ---
+  duration_ms: 0.078173
+  type: 'test'
+  ...
+# Subtest: Paginacao rejeita "0"
+ok 21 - Paginacao rejeita "0"
+  ---
+  duration_ms: 0.959133
+  type: 'test'
+  ...
+# Subtest: Paginacao rejeita "-1"
+ok 22 - Paginacao rejeita "-1"
+  ---
+  duration_ms: 0.090932
+  type: 'test'
+  ...
+# Subtest: Paginacao rejeita "1.2"
+ok 23 - Paginacao rejeita "1.2"
+  ---
+  duration_ms: 0.056039
+  type: 'test'
+  ...
+# Subtest: Paginacao rejeita "1abc"
+ok 24 - Paginacao rejeita "1abc"
+  ---
+  duration_ms: 0.051549
+  type: 'test'
+  ...
+# Subtest: Paginacao rejeita "1e3"
+ok 25 - Paginacao rejeita "1e3"
+  ---
+  duration_ms: 0.044902
+  type: 'test'
+  ...
+# Subtest: Paginacao rejeita ""
+ok 26 - Paginacao rejeita ""
+  ---
+  duration_ms: 0.098482
+  type: 'test'
+  ...
+# Subtest: Paginacao rejeita ["1","2"]
+ok 27 - Paginacao rejeita ["1","2"]
+  ---
+  duration_ms: 0.098533
+  type: 'test'
+  ...
+# Subtest: Limit maior que 100 rejeitado
+ok 28 - Limit maior que 100 rejeitado
+  ---
+  duration_ms: 0.090062
+  type: 'test'
+  ...
+# Subtest: Filtro de categoria
+ok 29 - Filtro de categoria
+  ---
+  duration_ms: 0.092897
+  type: 'test'
+  ...
+# Subtest: Categoria desconhecida
+ok 30 - Categoria desconhecida
+  ---
+  duration_ms: 0.34831
+  type: 'test'
+  ...
+# Subtest: ID estritamente numerico
+ok 31 - ID estritamente numerico
+  ---
+  duration_ms: 0.133424
+  type: 'test'
+  ...
+# Subtest: Login normaliza email
+ok 32 - Login normaliza email
+  ---
+  duration_ms: 0.398183
+  type: 'test'
+  ...
+# Subtest: Login valido nao expoe senha
+ok 33 - Login valido nao expoe senha
+  ---
+  duration_ms: 0.136734
+  type: 'test'
+  ...
+# Subtest: Senha incorreta nao autentica
+ok 34 - Senha incorreta nao autentica
+  ---
+  duration_ms: 0.174532
+  type: 'test'
+  ...
+# Subtest: Usuario desconhecido nao autentica
+ok 35 - Usuario desconhecido nao autentica
+  ---
+  duration_ms: 0.456859
+  type: 'test'
+  ...
+# Subtest: Credenciais malformadas: undefined
+ok 36 - Credenciais malformadas: undefined
+  ---
+  duration_ms: 0.12505
+  type: 'test'
+  ...
+# Subtest: Credenciais malformadas: {}
+ok 37 - Credenciais malformadas: {}
+  ---
+  duration_ms: 0.048127
+  type: 'test'
+  ...
+# Subtest: Credenciais malformadas: []
+ok 38 - Credenciais malformadas: []
+  ---
+  duration_ms: 0.042386
+  type: 'test'
+  ...
+# Subtest: Credenciais malformadas: {"email":"x","senha":123}
+ok 39 - Credenciais malformadas: {"email":"x","senha":123}
+  ---
+  duration_ms: 0.115978
+  type: 'test'
+  ...
+# Subtest: Credenciais malformadas: {"email":" ","senha":"a"}
+ok 40 - Credenciais malformadas: {"email":" ","senha":"a"}
+  ---
+  duration_ms: 0.05128
+  type: 'test'
+  ...
+# Subtest: Segredo ausente rejeitado
+ok 41 - Segredo ausente rejeitado
+  ---
+  duration_ms: 0.083908
+  type: 'test'
+  ...
+# Subtest: Segredo curto rejeitado
+ok 42 - Segredo curto rejeitado
+  ---
+  duration_ms: 0.106007
+  type: 'test'
+  ...
+# Subtest: Segredo com 32 bytes aceito
+ok 43 - Segredo com 32 bytes aceito
+  ---
+  duration_ms: 0.051207
+  type: 'test'
+  ...
+# Subtest: Opcoes JWT restringem algoritmo, emissor e audiencia
+ok 44 - Opcoes JWT restringem algoritmo, emissor e audiencia
+  ---
+  duration_ms: 0.066749
+  type: 'test'
+  ...
+1..44
+# tests 44
+# suites 0
+# pass 44
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 315.456281
